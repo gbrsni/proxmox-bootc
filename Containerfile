@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/tulilirockz/debian-bootc:latest as proxmox-default-kernel
+FROM ghcr.io/tulilirockz/debian-bootc:latest AS proxmox-default-kernel
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
