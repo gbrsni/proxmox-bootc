@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-echo "192.168.1.1 ${$(hostname)}" >> /etc/hosts
+echo "192.168.1.1 $(hostname)" >> /etc/hosts
 
 mkdir /root
 
