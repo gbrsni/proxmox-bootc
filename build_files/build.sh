@@ -24,9 +24,9 @@ wget https://enterprise.proxmox.com/debian/proxmox-archive-keyring-trixie.gpg -O
 
 apt-get update -y
 
-apt-get remove -y linux-image-amd64 'linux-image-*' os-prober
 apt-get install -y proxmox-default-kernel
 apt-get install -y proxmox-ve postfix open-iscsi chrony
+apt-get remove -y linux-image-amd64 'linux-image-*' os-prober
 
 
 # Use a COPR Example:
