@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-apt install -y wget
+apt-get install -y wget
 
 cat > /etc/apt/sources.list.d/pve-install-repo.sources << EOL
 Types: deb
@@ -22,11 +22,11 @@ EOL
 
 wget https://enterprise.proxmox.com/debian/proxmox-archive-keyring-trixie.gpg -O /usr/share/keyrings/proxmox-archive-keyring.gpg
 
-apt update -y
+apt-get update -y
 
-apt remove -y linux-image-amd64 'linux-image-*' os-prober
-apt install -y proxmox-default-kernel
-apt install -y proxmox-ve postfix open-iscsi chrony
+apt-get remove -y linux-image-amd64 'linux-image-*' os-prober
+apt-get install -y proxmox-default-kernel
+apt-get install -y proxmox-ve postfix open-iscsi chrony
 
 
 # Use a COPR Example:
