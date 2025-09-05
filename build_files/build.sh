@@ -22,6 +22,8 @@ EOL
 
 wget https://enterprise.proxmox.com/debian/proxmox-archive-keyring-trixie.gpg -O /usr/share/keyrings/proxmox-archive-keyring.gpg
 
+apt update -y
+
 apt remove -y linux-image-amd64 'linux-image-*' os-prober
 apt install -y proxmox-default-kernel
 apt install -y proxmox-ve postfix open-iscsi chrony
